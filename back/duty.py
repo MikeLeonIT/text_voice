@@ -23,7 +23,7 @@ def update_graf():
     result2 = []
     for x in result:
         for y in x:
-            if type(y) ==float:
+            if type(y) == float:
                 y = xlrd.xldate_as_datetime(y, 0)
             if y in ['Альберт', 'Александр', 'Юлия', 'Илья', 'Евгений', 'Михаил']:
                 result2.append(x)
@@ -48,6 +48,8 @@ def get_duty():
                 x = x.split()[-1]
                 with open("front/only_duty.txt", "w+", encoding="utf-8") as file2:
                     file2.write(x)
+
+
 update_graf()
 get_duty()
 print(datetime.now())
